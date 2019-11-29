@@ -25,8 +25,10 @@ class Counter extends Component {
       <React.Fragment>
         <span className={classes}>{this.formatCount()}</span>
         <button className="btn btn-secondary btn-sm">Increment</button>
-        {/* conditional redering */}
-        {this.renderTags()}
+        <div>
+          {this.state.tags.length === 0 && "Please create a new tag"}
+          {this.renderTags()}
+        </div>
       </React.Fragment>
     );
   }
